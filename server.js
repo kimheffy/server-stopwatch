@@ -19,17 +19,17 @@ const server = http.createServer((req, res) => {
   //timeouts for testing route performance
   switch(req.url) {
     case '/':
-      switch (req.method){
+      switch (req.method) {
         case 'GET':
           setTimeout(function(){
             res.end('GET');
-          }, 5000);
+          }, 1000);
           break;
         case 'POST':
-          // setTimeout(function(){
-          //   res.end('POST');
-          // }, 2000);
-          res.end('POST')
+          // res.end('POST');
+          setTimeout(function(){
+            res.end('POST');
+          }, 1000);
           break;
         default:
           return;
