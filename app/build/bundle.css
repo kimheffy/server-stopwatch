@@ -1,24 +1,4 @@
 /*
- * Every class name will be hashed so it can be used their own component scoped
- * Use classes instead of ids
- */
-
-._1S2e0v-Hsq59CJKiB9h-4C {
-    height: 100px;
-}
-/*
- * Every class name will be hashed so it can be used their own component scoped
- * Use classes instead of ids
- */
-
-._29aw_R5k2KsQVSNBJTu7U5 {
-    color: var(--primary-color);    /* Using global constants example */
-}
-
-._uvxNHFF_5yCj0xAzeYli {                 /* Composition example */
-    text-decoration: none;
-}
-/*
  * Global constants goes here
  */
 :root {

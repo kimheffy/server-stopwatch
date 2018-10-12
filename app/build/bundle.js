@@ -94,53 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Url */ \"./app/src/components/Url.jsx\");\n/* harmony import */ var _components_Logo___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Logo/ */ \"./app/src/components/Logo/index.jsx\");\n/* harmony import */ var _components_Link___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Link/ */ \"./app/src/components/Link/index.jsx\");\n/* harmony import */ var os__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! os */ \"os\");\n/* harmony import */ var os__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(os__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _components_containers_dashboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/containers/dashboard */ \"./app/src/components/containers/dashboard.jsx\");\n\n\n\n\n\n\n\n\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n  // constructor() {\n  //   super();\n  //   this.state = {\n  //     isToggled: false,\n  //   };\n  // }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n      'div',\n      null,\n      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Url__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)\n    );\n  }\n}\n\n//# sourceURL=webpack:///./app/src/App.jsx?");
-
-/***/ }),
-
-/***/ "./app/src/components/Link/index.jsx":
-/*!*******************************************!*\
-  !*** ./app/src/components/Link/index.jsx ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Link; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! electron */ \"electron\");\n/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(electron__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ \"./app/src/components/Link/styles.css\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\nclass Link extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n\n    link(url) {\n        electron__WEBPACK_IMPORTED_MODULE_1__[\"shell\"].openExternal(url);\n    }\n\n    render() {\n        console.log(_styles_css__WEBPACK_IMPORTED_MODULE_2___default.a);\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n            'a',\n            { href: '#', onClick: () => {\n                    this.link(this.props.to);\n                }, className: _styles_css__WEBPACK_IMPORTED_MODULE_2___default.a.link },\n            this.props.children\n        );\n    }\n}\n\n//# sourceURL=webpack:///./app/src/components/Link/index.jsx?");
-
-/***/ }),
-
-/***/ "./app/src/components/Link/styles.css":
-/*!********************************************!*\
-  !*** ./app/src/components/Link/styles.css ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"tone\":\"_29aw_R5k2KsQVSNBJTu7U5\",\"link\":\"_uvxNHFF_5yCj0xAzeYli _29aw_R5k2KsQVSNBJTu7U5\"};\n\n//# sourceURL=webpack:///./app/src/components/Link/styles.css?");
-
-/***/ }),
-
-/***/ "./app/src/components/Logo/index.jsx":
-/*!*******************************************!*\
-  !*** ./app/src/components/Logo/index.jsx ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Logo; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.css */ \"./app/src/components/Logo/styles.css\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass Logo extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n    render() {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement('img', { src: this.props.src, className: _styles_css__WEBPACK_IMPORTED_MODULE_1___default.a.logo });\n    }\n}\n\n//# sourceURL=webpack:///./app/src/components/Logo/index.jsx?");
-
-/***/ }),
-
-/***/ "./app/src/components/Logo/styles.css":
-/*!********************************************!*\
-  !*** ./app/src/components/Logo/styles.css ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("// removed by extract-text-webpack-plugin\nmodule.exports = {\"logo\":\"_1S2e0v-Hsq59CJKiB9h-4C\"};\n\n//# sourceURL=webpack:///./app/src/components/Logo/styles.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return App; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Url__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Url */ \"./app/src/components/Url.jsx\");\n\n\n\n// import Logo from './components/Logo/';\n// import Link from './components/Link/';\n// import { setPriority } from 'os';\n\n// import Dashboard from './components/containers/dashboard';\n\nclass App extends react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"] {\n  // constructor() {\n  //   super();\n  //   this.state = {\n  //     isToggled: false,\n  //   };\n  // }\n\n  render() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\n      'div',\n      null,\n      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Url__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)\n    );\n  }\n}\n\n//# sourceURL=webpack:///./app/src/App.jsx?");
 
 /***/ }),
 
@@ -343,17 +297,6 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"electron\");\n\n//# sourceURL=webpack:///external_%22electron%22?");
-
-/***/ }),
-
-/***/ "os":
-/*!*********************!*\
-  !*** external "os" ***!
-  \*********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"os\");\n\n//# sourceURL=webpack:///external_%22os%22?");
 
 /***/ })
 
