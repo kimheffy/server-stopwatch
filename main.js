@@ -12,7 +12,7 @@ require('electron-reload')(__dirname);
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow;
+let mainWindow, secondaryWindow;
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
@@ -42,6 +42,11 @@ app.on('ready', () => {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+  
+  // secondaryWindow = new BrowserWindow({ parent: mainWindow, show: false });
+  // successfully created a new window chart
+  secondaryWindow = new BrowserWindow({ width: 800, height: 500 });
+  secondaryWindow.loadURL(`file://${__dirname}/graph/chart.html`);
 });
 
 ipcMain.on('server', (event, filePath) => {
@@ -60,3 +65,5 @@ ipcMain.on('server', (event, filePath) => {
     console.log('server terminated');
   });
 });
+
+module.exports = { secondaryWindow };

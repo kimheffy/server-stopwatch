@@ -3,7 +3,7 @@ logs
 *.log
 
 package-lock.json
-.DS_Store
+./.DS_Store
 
 # Runtime data
 pids

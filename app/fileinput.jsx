@@ -11,7 +11,7 @@ class FileInput extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.handleInput(this.fileInput.current.files[0].path)
+    this.props.handleInput(this.fileInput.current.files[0].path);
   }
 
   render() {
