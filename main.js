@@ -45,8 +45,8 @@ app.on('ready', () => {
   
   // secondaryWindow = new BrowserWindow({ parent: mainWindow, show: false });
   // successfully created a new window chart
-  secondaryWindow = new BrowserWindow({ width: 800, height: 500 });
-  secondaryWindow.loadURL(`file://${__dirname}/graph/chart.html`);
+  // secondaryWindow = new BrowserWindow({ width: 800, height: 500 });
+  // secondaryWindow.loadURL(`file://${__dirname}/graph/chart.html`);
 });
 
 ipcMain.on('server', (event, filePath) => {
@@ -56,7 +56,7 @@ ipcMain.on('server', (event, filePath) => {
   
   child.on('message', data => {
     data = JSON.parse(data.toString());
-    console.log(data);
+    // console.log(data);
     event.sender.send('child-data', data);
   });
 

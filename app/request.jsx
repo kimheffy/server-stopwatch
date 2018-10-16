@@ -43,7 +43,7 @@ class Request extends React.Component {
 
   handleOnData = () => {
     ipcRenderer.on('child-data', (event, data) => {
-      console.log(data);
+      console.log('output: ', data);
     });
   }
 

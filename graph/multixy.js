@@ -23,6 +23,9 @@ bb.generate(
           format: (x) => new Date(x), 
         },
       },
+      y: {
+        label: 'miliseconds',
+      },
     },
     zoom: {
       enabled: true,
