@@ -21,11 +21,20 @@ function validateUser(req, res, next) {
   next();
 }
 
+function fib(num) {
+  if (num === 0 || num === 1) return num;
+  return fib(num - 2) + fib(num - 1);
+}
+
 const _validateUser = performance.timerify(validateUser);
+const _fib = performance.timerify(fib);
 
 app.post('/', _validateUser, (req, res) => {
-  res.send({ name: req.body.name });
-})
+  console.log('hitting');
+  console.log(req.body.number);
+  let result = _fib(req.body.number);
+  res.send({ number: result });
+});
 
 app.get('/no', (req, res) => {
   const _reverse = performance.timerify(reverse);

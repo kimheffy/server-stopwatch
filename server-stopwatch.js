@@ -11,6 +11,7 @@ function StopWatch() {
         actualTime: performance.timeOrigin + entry.startTime,
       }
     });
+    console.log(JSON.stringify(entries));
     process.send(JSON.stringify(entries));
     performance.clearMarks();
   });

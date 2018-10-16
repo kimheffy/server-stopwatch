@@ -4,11 +4,17 @@ let data;
 
 let validateArray = ['validateUser'];
 let time1 = ['time1'];
+
 let rootArray = ['/'];
 let time2 = ['time2'];
+
+let fib = ['fib'];
+let time3 = ['time3'];
+
 let originxs = {
   validateUser: "time1",
   '/': "time2",
+  fib: 'time3',
 };
 
 let chart;
@@ -29,19 +35,19 @@ ipcRenderer.on('label', (event, arg) => {
       rootArray.push(data[i].duration);
       time2.push(data[i].actualTime);
     }
+    if (data[i].mark === 'fib'){
+      console.log('htting fib');
+      fib.push(data[i].duration);
+      time3.push(data[i].actualTime);
+    }
   }
+
   chart.load({
     xs: originxs,
     columns: [
-      time1, time2, validateArray, rootArray,
-      // ...time1, ...time2,
-      // ...validateArray, ...rootArray,
+      time1, time2, time3, validateArray, rootArray, fib,
     ],
   });
-  // validateArray = ['validateUser'];
-  // time1 = ['time1'];
-  // rootArray = ['/'];
-  // time1 = ['time2'];
 });
 
 
@@ -49,20 +55,17 @@ chart = bb.generate(
   {
     data: {
       xs: {
-        // login: "time1",
-        // register: "time2",
         validateUser: "time1",
         '/': "time2",
+        fib: "time3",
       },
       columns: [
-        // ['time1', 1539621091618, 1539621093924, 1539621098535, 1539621103137, 1539621107747, 1539621110052],
-        // ['time2', 1539621091618, 1539621093924, 1539621098535, 1539621103137, 1539621107747, 1539621110052],
-        // ["login", 30, 200, 100, 400, 150, 250],
-        // ["register", 20, 180, 240, 100, 190],
         ['time1'],
         ['time2'],
+        ['time3'],
         ["validateUser"],
         ["/"],
+        ['fib'],
       ],
       xFormat: '%Q',
     },

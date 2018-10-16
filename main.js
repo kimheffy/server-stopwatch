@@ -17,7 +17,7 @@ app.on('ready', () => {
   mainWindow = new BrowserWindow({ width: 1024, height: 600 });
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
-  secondWindow = new BrowserWindow({ width: 300, height: 300, parent: mainWindow });
+  secondWindow = new BrowserWindow({ width: 600, height: 600, parent: mainWindow });
   secondWindow.loadURL(`file://${__dirname}/graph/chart.html`);
 
   mainWindow.on('closed', () => {
